@@ -21,10 +21,10 @@ function calculation(input) {
         adding a '-' at the beginning of the 0-9 part of the expression allowed for 
         negative numbers to be included in our regular expression
     */
-    const validNumbers = input.match('^[-0-9\(\)\+\*\/\. ]*$');
+    const validCharacters = input.match('^[-0-9\(\)\+\*\/\. ]*$');
 
     // check if the input contains ASCII characters and the length is less than or equal to 20
-    if (!validASCII || !validLength || !validNumbers) {
+    if (!validASCII || !validLength || !validCharacters) {
         throw new Error("Invalid input")
     }
 
