@@ -13,6 +13,14 @@ function calculation(input) {
         verifies if the user input contains numberic characters from 0-9, 
         including negative numbers, and the characters ( ) + . *
     */ 
+    
+    /*
+        the .match() function was throwing an error at the inclusion of the '\-'
+        in our regular expression, despite the fact that it was valid in regex101
+
+        adding a '-' at the beginning of the 0-9 part of the expression allowed for 
+        negative numbers to be included in our regular expression
+    */
     const validNumbers = input.match('^[-0-9\(\)\+\*\/\. ]*$');
 
     // check if the input contains ASCII characters and the length is less than or equal to 20
